@@ -1,4 +1,15 @@
 body{
     font-family: 'Varela Round', sans-serif;
+    background-image: url("../assests/background-image.jpg");
+}
 
+#intro-header{
+    display:none;
+    border-bottom: 5px solid #6EFF70;
+}
+
+
+#schedule-div{
+    margin-top:1%;
+    
 }
