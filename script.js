@@ -1,7 +1,7 @@
 $("#intro-header").fadeIn(1500);
 
-var currentDate = document.getElementById("current-date");
-var currentTime = document.getElementById("current-time");
+var currentDate = $("#current-date");
+var currentTime = $("#urrent-time");
 
 setInterval(() => {
     var dayNow = moment();
@@ -10,7 +10,7 @@ setInterval(() => {
     var day = dayNow.format('dddd - MMMM DD, YYYY ');
     var time = timeNow.format('h:mma');
 
-    currentDate.textContent = day;
-    currentTime.textContent = time;
+    currentDate.text(day);
+    currentTime.text(time);
 
 }, 1000);
