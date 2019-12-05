@@ -1,8 +1,10 @@
 $("#intro-header").fadeIn(1500);
 
+//Set date and time variables
 var currentDate = $("#current-date");
-var currentTime = $("#urrent-time");
+var currentTime = $("#current-time");
 
+//Using moment.js to format and display date and time
 setInterval(() => {
     var dayNow = moment();
     var timeNow = moment();
