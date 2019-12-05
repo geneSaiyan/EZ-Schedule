@@ -16,3 +16,20 @@ setInterval(() => {
     currentTime.text(time);
 
 }, 1000);
+
+//when a user starts typing save text
+// $("#pinkStickyNote").keyup(function(){
+//     // Getting the current value of textarea
+//     var currentText = $(this).val();
+    
+//     // Setting the Div content
+//     $("#txt9am").text(currentText);
+// });
+
+//When a user clicks out of the sticky note save text
+// $("#pinkStickyNote").blur(function() {
+//     alert("hello");
+//   });
+
+
+  
