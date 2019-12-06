@@ -22,6 +22,10 @@ body{
     margin-bottom: 3px;
 }
 
+#schedule-div .input-group-text{
+    width: 90px;
+}
+
 #schedule-div h3{
     color: white;
     text-align: center;
