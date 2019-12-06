@@ -1,4 +1,5 @@
-$("#intro-header").fadeIn(1500);
+$("#intro-header").fadeIn(2000);
+$("#schedule-div").fadeIn(3000);
 
 //Set date and time variables
 var currentDate = $("#current-date");

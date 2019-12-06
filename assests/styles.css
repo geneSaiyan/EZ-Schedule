@@ -16,6 +16,7 @@ body{
 
 #schedule-div{
     margin-top:1%;
+    display: none;
 }
 
 #schedule-div .input-group{
