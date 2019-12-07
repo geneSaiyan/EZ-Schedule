@@ -18,6 +18,7 @@ setInterval(() => {
 
 }, 1000);
 
+//Setting textarea and save button variables
 var txt9am = document.getElementById("txt9am");
 var btn9am = $("#btn9am");
 
@@ -33,7 +34,6 @@ btn9am.click(function () {
     event.preventDefault();
 
     localStorage.setItem("9am", txt9am.value);
-    renderText();
 
 })
 
