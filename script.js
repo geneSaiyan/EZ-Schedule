@@ -22,23 +22,29 @@ setInterval(() => {
 var txt9am = document.getElementById("txt9am");
 var btn9am = $("#btn9am");
 
-renderText();
+var stickyNote = document.getElementById("pinkStickyNote");
 
-function renderText() {
+//Function to make text display in the textarea elements
+renderTextarea();
+
+function renderTextarea() {
     var txt9amStored = localStorage.getItem("9am");
     txt9am.value = txt9amStored;
-}
 
+    var stickyNoteStored = localStorage.getItem("stickyNote");
+    stickyNote.value = stickyNoteStored;
+}
 
 btn9am.click(function () {
     event.preventDefault();
 
     localStorage.setItem("9am", txt9am.value);
-
 })
 
 
-  //When a user clicks out of the sticky note save text
-// $("#pinkStickyNote").blur(function() {
-//     alert("hello");
-//   });
+//When a user clicks out of the sticky note save text
+$("#pinkStickyNote").blur(function () {
+    event.preventDefault();
+
+localStorage.setItem("stickyNote", stickyNote.value);
+});
