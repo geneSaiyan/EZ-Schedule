@@ -19,26 +19,38 @@ setInterval(() => {
 }, 1000);
 
 //Setting textarea and save button variables
-var txt9am = document.getElementById("txt9am");
+var txt9am = $("#txt9am");
 var btn9am = $("#btn9am");
+var txt10am = $("#txt10am");
+var btn10am = $("#btn10am");
 
-var stickyNote = document.getElementById("pinkStickyNote");
+var stickyNote = $("#pinkStickyNote");
 
 //Function to make text display in the textarea elements
 renderTextarea();
 
 function renderTextarea() {
     var txt9amStored = localStorage.getItem("9am");
-    txt9am.value = txt9amStored;
+    txt9am.val(txt9amStored);
+
+    var txt10amStored = localStorage.getItem("10am");
+    txt10am.val(txt10amStored);
 
     var stickyNoteStored = localStorage.getItem("stickyNote");
-    stickyNote.value = stickyNoteStored;
+    stickyNote.val(stickyNoteStored);
 }
 
+//Button clicks to save textarea values
 btn9am.click(function () {
     event.preventDefault();
 
-    localStorage.setItem("9am", txt9am.value);
+    localStorage.setItem("9am", txt9am.val());
+})
+
+btn10am.click(function () {
+    event.preventDefault();
+
+    localStorage.setItem("10am", txt10am.val());
 })
 
 
@@ -46,5 +58,5 @@ btn9am.click(function () {
 $("#pinkStickyNote").blur(function () {
     event.preventDefault();
 
-localStorage.setItem("stickyNote", stickyNote.value);
+localStorage.setItem("stickyNote", stickyNote.val());
 });
