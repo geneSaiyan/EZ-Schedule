@@ -18,12 +18,27 @@ setInterval(() => {
 
 }, 1000);
 
+var txt9am = document.getElementById("txt9am");
+var btn9am = $("#btn9am");
+
+renderText();
+
+function renderText() {
+    var txt9amStored = localStorage.getItem("9am");
+    txt9am.value = txt9amStored;
+}
 
 
-//When a user clicks out of the sticky note save text
+btn9am.click(function () {
+    event.preventDefault();
+
+    localStorage.setItem("9am", txt9am.value);
+    renderText();
+
+})
+
+
+  //When a user clicks out of the sticky note save text
 // $("#pinkStickyNote").blur(function() {
 //     alert("hello");
 //   });
-
-
-  
