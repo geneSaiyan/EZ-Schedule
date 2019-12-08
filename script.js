@@ -23,14 +23,16 @@ setInterval(() => {
     updateBckgrnd()
 }, 1000);
 
-//Setting textarea and save button variables
-var txt9am = $("#txt9am");
-var btn9am = $("#btn9am");
-var txt10am = $("#txt10am");
-var btn10am = $("#btn10am");
-var txt11am = $("#txt11am");
-var btn11am = $("#btn11am");
+//Putting Schedule times in an array
+var scheduleTimes = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"]
 
+//For loop the schedule times and dynamically create variables
+for (var i = 0; i < scheduleTimes.length; ++i) {
+    this["txt"+scheduleTimes[i]] = $("#txt"+scheduleTimes[i]);
+    this["btn"+scheduleTimes[i]] = $("#btn"+scheduleTimes[i]);
+}
+
+//Setting sticky note variable
 var stickyNote = $("#pinkStickyNote");
 
 //Function to make text display in the textarea elements
@@ -38,15 +40,12 @@ renderTextarea();
 
 //Created function to display textarea values
 function renderTextarea() {
-    var txt9amStored = localStorage.getItem("9am");
-    txt9am.val(txt9amStored);
 
-    var txt10amStored = localStorage.getItem("10am");
-    txt10am.val(txt10amStored);
-
-    var txt11amStored = localStorage.getItem("11am");
-    txt11am.val(txt11amStored);
-
+    for (var i = 0; i < scheduleTimes.length; ++i) {
+        this["txt"+scheduleTimes[i]+"stored"] = localStorage.getItem(scheduleTimes[i]);
+        this["txt"+scheduleTimes[i]].val(this["txt"+scheduleTimes[i]+"stored"])
+    }
+    
     var stickyNoteStored = localStorage.getItem("stickyNote");
     stickyNote.val(stickyNoteStored);
 }
@@ -70,6 +69,41 @@ btn11am.click(function () {
     localStorage.setItem("11am", txt11am.val());
 })
 
+btn12pm.click(function () {
+    event.preventDefault();
+
+    localStorage.setItem("12pm", txt12pm.val());
+})
+
+btn1pm.click(function () {
+    event.preventDefault();
+
+    localStorage.setItem("1pm", txt1pm.val());
+})
+
+btn2pm.click(function () {
+    event.preventDefault();
+
+    localStorage.setItem("2pm", txt2pm.val());
+})
+
+btn3pm.click(function () {
+    event.preventDefault();
+
+    localStorage.setItem("3pm", txt3pm.val());
+})
+
+btn4pm.click(function () {
+    event.preventDefault();
+
+    localStorage.setItem("4pm", txt4pm.val());
+})
+
+btn5pm.click(function () {
+    event.preventDefault();
+
+    localStorage.setItem("5pm", txt5pm.val());
+})
 //When a user clicks out of the sticky note save text
 $("#pinkStickyNote").blur(function () {
     event.preventDefault();
@@ -77,8 +111,9 @@ $("#pinkStickyNote").blur(function () {
 localStorage.setItem("stickyNote", stickyNote.val());
 });
 
+//Update background color function based on hour of the day
 function updateBckgrnd(){
-    
+
     if(hour == 9){
         
     }
