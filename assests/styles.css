@@ -35,3 +35,15 @@ body{
 #pinkStickyNote{
     background-color: pink;
 }
+
+.redBckgrnd{
+    background-color: #F08080;	
+}
+
+.greenBckgrnd{
+    background-color: #7FFF00;	
+}
+
+.grayBckgrnd{
+    background-color: #D3D3D3;	
+}
