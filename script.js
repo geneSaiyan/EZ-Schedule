@@ -1,3 +1,4 @@
+//Fade in
 $("#intro-header").fadeIn(2000);
 $("#schedule-div").fadeIn(3000);
 
@@ -117,31 +118,126 @@ $("#pinkStickyNote").blur(function () {
 function updateBckgrndColor() {
 
     if (hour == 9) {
-
+        txt9am.css("background-color", "#F08080");
+        txt10am.css("background-color", "#7FFF00");
+        txt11am.css("background-color", "#7FFF00");
+        txt12pm.css("background-color", "#7FFF00");
+        txt1pm.css("background-color", "#7FFF00");
+        txt2pm.css("background-color", "#7FFF00");
+        txt3pm.css("background-color", "#7FFF00");
+        txt4pm.css("background-color", "#7FFF00");
+        txt5pm.css("background-color", "#7FFF00");
     }
     else if (hour == 10) {
+        txt9am.css("background-color", "#D3D3D3");
+        txt10am.css("background-color", "#F08080");
+        txt11am.css("background-color", "#7FFF00");
+        txt12pm.css("background-color", "#7FFF00");
+        txt1pm.css("background-color", "#7FFF00");
+        txt2pm.css("background-color", "#7FFF00");
+        txt3pm.css("background-color", "#7FFF00");
+        txt4pm.css("background-color", "#7FFF00");
+        txt5pm.css("background-color", "#7FFF00");
 
     }
     else if (hour == 11) {
-
+        txt9am.css("background-color", "#D3D3D3");
+        txt10am.css("background-color", "#D3D3D3");
+        txt11am.css("background-color", "#F08080");
+        txt12pm.css("background-color", "#7FFF00");
+        txt1pm.css("background-color", "#7FFF00");
+        txt2pm.css("background-color", "#7FFF00");
+        txt3pm.css("background-color", "#7FFF00");
+        txt4pm.css("background-color", "#7FFF00");
+        txt5pm.css("background-color", "#7FFF00");
     }
     else if (hour == 12) {
-
+        txt9am.css("background-color", "#D3D3D3");
+        txt10am.css("background-color", "#D3D3D3");
+        txt11am.css("background-color", "#D3D3D3");
+        txt12pm.css("background-color", "#F08080");
+        txt1pm.css("background-color", "#7FFF00");
+        txt2pm.css("background-color", "#7FFF00");
+        txt3pm.css("background-color", "#7FFF00");
+        txt4pm.css("background-color", "#7FFF00");
+        txt5pm.css("background-color", "#7FFF00");
     }
     else if (hour == 13) {
-
+        txt9am.css("background-color", "#D3D3D3");
+        txt10am.css("background-color", "#D3D3D3");
+        txt11am.css("background-color", "#D3D3D3");
+        txt12pm.css("background-color", "#D3D3D3");
+        txt1pm.css("background-color", "#F08080");
+        txt2pm.css("background-color", "#7FFF00");
+        txt3pm.css("background-color", "#7FFF00");
+        txt4pm.css("background-color", "#7FFF00");
+        txt5pm.css("background-color", "#7FFF00");
     }
     else if (hour == 14) {
-
+        txt9am.css("background-color", "#D3D3D3");
+        txt10am.css("background-color", "#D3D3D3");
+        txt11am.css("background-color", "#D3D3D3");
+        txt12pm.css("background-color", "#D3D3D3");
+        txt1pm.css("background-color", "#D3D3D3");
+        txt2pm.css("background-color", "#F08080");
+        txt3pm.css("background-color", "#7FFF00");
+        txt4pm.css("background-color", "#7FFF00");
+        txt5pm.css("background-color", "#7FFF00");
     }
     else if (hour == 15) {
-
+        txt9am.css("background-color", "#D3D3D3");
+        txt10am.css("background-color", "#D3D3D3");
+        txt11am.css("background-color", "#D3D3D3");
+        txt12pm.css("background-color", "#D3D3D3");
+        txt1pm.css("background-color", "#D3D3D3");
+        txt2pm.css("background-color", "#D3D3D3");
+        txt3pm.css("background-color", "#F08080");
+        txt4pm.css("background-color", "#7FFF00");
+        txt5pm.css("background-color", "#7FFF00");
     }
     else if (hour == 16) {
-
+        txt9am.css("background-color", "#D3D3D3");
+        txt10am.css("background-color", "#D3D3D3");
+        txt11am.css("background-color", "#D3D3D3");
+        txt12pm.css("background-color", "#D3D3D3");
+        txt1pm.css("background-color", "#D3D3D3");
+        txt2pm.css("background-color", "#D3D3D3");
+        txt3pm.css("background-color", "#D3D3D3");
+        txt4pm.css("background-color", "#F08080");
+        txt5pm.css("background-color", "#7FFF00");
     }
     else if (hour == 17) {
-
+        txt9am.css("background-color", "#D3D3D3");
+        txt10am.css("background-color", "#D3D3D3");
+        txt11am.css("background-color", "#D3D3D3");
+        txt12pm.css("background-color", "#D3D3D3");
+        txt1pm.css("background-color", "#D3D3D3");
+        txt2pm.css("background-color", "#D3D3D3");
+        txt3pm.css("background-color", "#D3D3D3");
+        txt4pm.css("background-color", "#D3D3D3");
+        txt5pm.css("background-color", "#F08080");
+    }
+    else if (hour < 9){
+        txt9am.css("background-color", "#7FFF00");
+        txt10am.css("background-color", "#7FFF00");
+        txt11am.css("background-color", "#7FFF00");
+        txt12pm.css("background-color", "#7FFF00");
+        txt1pm.css("background-color", "#7FFF00");
+        txt2pm.css("background-color", "#7FFF00");
+        txt3pm.css("background-color", "#7FFF00");
+        txt4pm.css("background-color", "#7FFF00");
+        txt5pm.css("background-color", "#7FFF00");
+    }
+    else if (hour > 17){
+        txt9am.css("background-color", "#D3D3D3");
+        txt10am.css("background-color", "#D3D3D3");
+        txt11am.css("background-color", "#D3D3D3");
+        txt12pm.css("background-color", "#D3D3D3");
+        txt1pm.css("background-color", "#D3D3D3");
+        txt2pm.css("background-color", "#D3D3D3");
+        txt3pm.css("background-color", "#D3D3D3");
+        txt4pm.css("background-color", "#D3D3D3");
+        txt5pm.css("background-color", "#D3D3D3");
     }
 }
 
