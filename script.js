@@ -58,6 +58,12 @@ function displayOverlay() {
     $("#overlay").fadeOut(2000);
 }
 
+//Function to display an overlay when the sticky note is saved
+function displayStickyOverlay() {
+    $("#overlaySticky").fadeIn(1000);
+    $("#overlaySticky").fadeOut(2000);
+}
+
 //Button clicks to save textarea values
 btn9am.click(function () {
     event.preventDefault();
@@ -127,6 +133,8 @@ $("#pinkStickyNote").blur(function () {
     event.preventDefault();
 
     localStorage.setItem("stickyNote", stickyNote.val());
+
+    displayStickyOverlay();
 });
 
 //Update background color function based on hour of the day
