@@ -64,69 +64,86 @@ function displayStickyOverlay() {
     $("#overlaySticky").fadeOut(2000);
 }
 
+//Use forEach() method on the scheduleTimes array to create the button clicks for saving text
+scheduleTimes.forEach(createButtonClick);
+
+//function to create button clicks
+function createButtonClick(times, index){
+    var btns = this["btn" + times];
+    var txt = this["txt" + times];
+
+     btns.click(function(){
+                event.preventDefault();
+                localStorage.setItem(times, txt.val());
+                displayOverlay();
+            })
+
+    console.log(times)
+}
+
 //Button clicks to save textarea values
-btn9am.click(function () {
-    event.preventDefault();
+// btn9am.click(function () {
+//     event.preventDefault();
 
-    localStorage.setItem("9am", txt9am.val());
-    displayOverlay();
-})
+//     localStorage.setItem("9am", txt9am.val());
+//     displayOverlay();
+// })
 
-btn10am.click(function () {
-    event.preventDefault();
+// btn10am.click(function () {
+//     event.preventDefault();
 
-    localStorage.setItem("10am", txt10am.val());
-    displayOverlay();
-})
+//     localStorage.setItem("10am", txt10am.val());
+//     displayOverlay();
+// })
 
-btn11am.click(function () {
-    event.preventDefault();
+// btn11am.click(function () {
+//     event.preventDefault();
 
-    localStorage.setItem("11am", txt11am.val());
-    displayOverlay();
-})
+//     localStorage.setItem("11am", txt11am.val());
+//     displayOverlay();
+// })
 
-btn12pm.click(function () {
-    event.preventDefault();
+// btn12pm.click(function () {
+//     event.preventDefault();
 
-    localStorage.setItem("12pm", txt12pm.val());
-    displayOverlay();
-})
+//     localStorage.setItem("12pm", txt12pm.val());
+//     displayOverlay();
+// })
 
-btn1pm.click(function () {
-    event.preventDefault();
+// btn1pm.click(function () {
+//     event.preventDefault();
 
-    localStorage.setItem("1pm", txt1pm.val());
-    displayOverlay();
-})
+//     localStorage.setItem("1pm", txt1pm.val());
+//     displayOverlay();
+// })
 
-btn2pm.click(function () {
-    event.preventDefault();
+// btn2pm.click(function () {
+//     event.preventDefault();
 
-    localStorage.setItem("2pm", txt2pm.val());
-    displayOverlay();
-})
+//     localStorage.setItem("2pm", txt2pm.val());
+//     displayOverlay();
+// })
 
-btn3pm.click(function () {
-    event.preventDefault();
+// btn3pm.click(function () {
+//     event.preventDefault();
 
-    localStorage.setItem("3pm", txt3pm.val());
-    displayOverlay();
-})
+//     localStorage.setItem("3pm", txt3pm.val());
+//     displayOverlay();
+// })
 
-btn4pm.click(function () {
-    event.preventDefault();
+// btn4pm.click(function () {
+//     event.preventDefault();
 
-    localStorage.setItem("4pm", txt4pm.val());
-    displayOverlay();
-})
+//     localStorage.setItem("4pm", txt4pm.val());
+//     displayOverlay();
+// })
 
-btn5pm.click(function () {
-    event.preventDefault();
+// btn5pm.click(function () {
+//     event.preventDefault();
 
-    localStorage.setItem("5pm", txt5pm.val());
-    displayOverlay();
-})
+//     localStorage.setItem("5pm", txt5pm.val());
+//     displayOverlay();
+// })
 
 //When a user clicks out of the sticky note save text
 $("#pinkStickyNote").blur(function () {
